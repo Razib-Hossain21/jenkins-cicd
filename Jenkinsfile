@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     //dockerImage.run("-p 5000:5000")
-		    sh "docker rm -f demo-container || true"
+		   			sh "docker rm -f demo-container || true"
                     sh "docker run -d -p 5000:5000 --name demo-container ${IMAGE_NAME}:${IMAGE_TAG}" 
 
                 }
